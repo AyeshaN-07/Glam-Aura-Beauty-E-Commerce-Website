@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Glam Aura - Beauty & Makeup</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+
+        <div class="logo">
+            <h1>GLAM AURA</h1>
+            <p>Glow Beyond Ordinary ✨</p>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="cart" onclick="showCart()">
+            🛒 Cart:
+            <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-heading">WELCOME TO GLAM AURA</p>
+
+            <h2>Unleash Your<br>Inner Glow ✨</h2>
+
+            <p>
+                Discover beauty essentials designed to
+                make you feel confident, beautiful and unique.
+            </p>
+
+            <button onclick="goToProducts()">
+                Shop Now
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="category-container">
+
+            <div class="category">
+                💋
+                <h3>Lips</h3>
+            </div>
+
+            <div class="category">
+                ✨
+                <h3>Face</h3>
+            </div>
+
+            <div class="category">
+                👁️
+                <h3>Eyes</h3>
+            </div>
+
+            <div class="category">
+                🌸
+                <h3>Beauty Care</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products">
+
+        <div class="section-heading">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>Beauty Essentials</h2>
+
+            <span>
+                Find your perfect beauty products
+            </span>
+
+        </div>
+
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="🔍 Search makeup products..."
+                onkeyup="searchProducts()"
+            >
+
+        </div>
+
+
+        <!-- Product Container -->
+
+        <div class="product-container">
+
+
+            <!-- PRODUCT 1 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/lipstick.jpg"
+                         alt="Matte Lipstick">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">BEST SELLER</span>
+
+                    <h3>Matte Lipstick</h3>
+
+                    <p>Long-lasting creamy matte lipstick.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹499</h4>
+
+                    <button onclick="addToCart('Matte Lipstick', 499)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/mascara.jpg"
+                         alt="Volume Mascara">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">POPULAR</span>
+
+                    <h3>Volume Mascara</h3>
+
+                    <p>Creates fuller and beautiful lashes.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹449</h4>
+
+                    <button onclick="addToCart('Volume Mascara', 449)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/foundation.jpg"
+                         alt="Liquid Foundation">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">NEW</span>
+
+                    <h3>Liquid Foundation</h3>
+
+                    <p>Smooth and natural-looking coverage.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <h4>₹799</h4>
+
+                    <button onclick="addToCart('Liquid Foundation', 799)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/blush.jpg"
+                         alt="Soft Pink Blush">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">TRENDING</span>
+
+                    <h3>Soft Pink Blush</h3>
+
+                    <p>Natural rosy color for your cheeks.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹399</h4>
+
+                    <button onclick="addToCart('Soft Pink Blush', 399)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/lipcare.jpg"
+                         alt="Hydrating Lip Care">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">CARE</span>
+
+                    <h3>Hydrating Lip Care</h3>
+
+                    <p>Keeps your lips soft and moisturized.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹299</h4>
+
+                    <button onclick="addToCart('Hydrating Lip Care', 299)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/highlighter.jpg"
+                         alt="Glow Highlighter">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">GLOW</span>
+
+                    <h3>Glow Highlighter</h3>
+
+                    <p>Give your skin a beautiful radiant glow.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹599</h4>
+
+                    <button onclick="addToCart('Glow Highlighter', 599)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 7 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/eyeshadow.jpg"
+                         alt="Eyeshadow Palette">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">NEW</span>
+
+                    <h3>Eyeshadow Palette</h3>
+
+                    <p>Beautiful shades for every occasion.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹899</h4>
+
+                    <button onclick="addToCart('Eyeshadow Palette', 899)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 8 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/concealer.jpg"
+                         alt="Full Coverage Concealer">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">POPULAR</span>
+
+                    <h3>Full Coverage Concealer</h3>
+
+                    <p>Helps create a smooth-looking complexion.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <h4>₹549</h4>
+
+                    <button onclick="addToCart('Full Coverage Concealer', 549)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 9 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/lipgloss.jpg"
+                         alt="Shine Lip Gloss">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">SHINE</span>
+
+                    <h3>Shine Lip Gloss</h3>
+
+                    <p>Glossy finish with a smooth feel.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹349</h4>
+
+                    <button onclick="addToCart('Shine Lip Gloss', 349)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 10 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/compact.jpg"
+                         alt="Compact Powder">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">EVERYDAY</span>
+
+                    <h3>Compact Powder</h3>
+
+                    <p>Lightweight powder for a fresh finish.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐☆
+                    </div>
+
+                    <h4>₹449</h4>
+
+                    <button onclick="addToCart('Compact Powder', 449)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 11 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/eyeliner.jpg"
+                         alt="Liquid Eyeliner">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">BEST SELLER</span>
+
+                    <h3>Liquid Eyeliner</h3>
+
+                    <p>Create sharp and elegant eye looks.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹299</h4>
+
+                    <button onclick="addToCart('Liquid Eyeliner', 299)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 12 -->
+
+            <div class="product">
+
+                <div class="product-image">
+                    <img src="images/primer.jpg"
+                         alt="Makeup Primer">
+                </div>
+
+                <div class="product-info">
+
+                    <span class="tag">ESSENTIAL</span>
+
+                    <h3>Makeup Primer</h3>
+
+                    <p>Creates a smooth base before makeup.</p>
+
+                    <div class="rating">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <h4>₹649</h4>
+
+                    <button onclick="addToCart('Makeup Primer', 649)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= OFFER ================= -->
+
+    <section id="offers" class="offer">
+
+        <p>LIMITED TIME OFFER</p>
+
+        <h2>Get 20% OFF</h2>
+
+        <h3>On Your First Order ✨</h3>
+
+        <p>
+            Use coupon code:
+            <strong>GLAM20</strong>
+        </p>
+
+        <button onclick="goToProducts()">
+            Shop the Offer
+        </button>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="about">
+
+        <div class="about-content">
+
+            <p>OUR STORY</p>
+
+            <h2>Beauty Begins With Confidence 💕</h2>
+
+            <p>
+                Glam Aura is a modern beauty brand created
+                to celebrate confidence, individuality and
+                self-expression.
+            </p>
+
+            <p>
+                From everyday essentials to glamorous looks,
+                our collection is designed to help you express
+                your unique beauty.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <h2>GLAM AURA</h2>
+
+            <p>Glow Beyond Ordinary ✨</p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#offers">Offers</a>
+            <a href="#about">About</a>
+
+        </div>
+
+        <p>
+            © 2026 Glam Aura. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= CART ================= -->
+
+    <div id="cart-box" class="cart-box">
+
+        <div class="cart-header">
+
+            <h2>Your Cart 🛒</h2>
+
+            <button onclick="closeCart()">✕</button>
+
+        </div>
+
+        <div id="cart-items">
+
+            <p>Your cart is empty.</p>
+
+        </div>
+
+        <div class="cart-total">
+
+            <h3>
+                Total: ₹<span id="cart-total">0</span>
+            </h3>
+
+            <button onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Connect JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
